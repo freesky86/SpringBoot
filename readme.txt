@@ -1,6 +1,9 @@
 ----------------------------------------------------------
 1. Create a Spring Boot application.
 	https://spring.io/guides/gs/spring-boot/#scratch
+	
+	Spring Initializr
+	https://start.spring.io/
 
 http://localhost:8080/
 http://localhost:8080/actuator/health
