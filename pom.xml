@@ -55,11 +55,34 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		
- 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind --> 
-<!-- 		<dependency> -->
-<!-- 		    <groupId>com.fasterxml.jackson.core</groupId> -->
-<!-- 		    <artifactId>jackson-databind</artifactId> -->
-<!-- 		</dependency> -->
+		<!-- 热部署 -->
+		<!-- 支持页面热部署 -->
+		<!-- 支持类文件热部署 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+		<!-- Configuration -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		</dependency>
+
 		
 		
 <!-- 		<dependency> -->

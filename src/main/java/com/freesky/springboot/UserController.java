@@ -11,33 +11,36 @@ import com.freesky.bean.User;
 
 /**
  * return a JSON object
+ * 
  * @author freesky
  *
  */
-@RestController   // @RestController = @Controller + @ResponseBody
+@RestController // @RestController = @Controller + @ResponseBody
 //@Controller
 @RequestMapping("/api/users")
 public class UserController {
-	
+
 //	@GetMapping("/getUser")
 //	@RequestMapping("/getUser")
 //	@ResponseBody
 	@GetMapping
 	public List<User> getUsers() {
 		List<User> users = new ArrayList<>();
-		
+
 		User user = new User();
 		user.setUid(1);
-		user.setName("Max");
-		user.setAge(28);		
+		user.setName("Max Jackson");
+		user.setAge(28);
+		user.setPassword("123");
 		users.add(user);
-		
+
 		User user2 = new User();
 		user2.setUid(2);
-		user2.setName("Bill");
+		user2.setName("Bill Gates");
 		user2.setAge(18);
+		user2.setPassword("abc");
 		users.add(user2);
-		
+
 		return users;
 	}
 
