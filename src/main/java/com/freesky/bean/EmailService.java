@@ -2,9 +2,11 @@ package com.freesky.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 @Service
+@PropertySource(value = "classpath:resource.properties")
 public class EmailService {
 
 	@Autowired

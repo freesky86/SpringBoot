@@ -19,6 +19,17 @@ public class User {
 	private String password = "";
 
 	private Integer uid;
+	
+	private String desc;
+	
+	
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
 
 	public Integer getAge() {
 		return age;

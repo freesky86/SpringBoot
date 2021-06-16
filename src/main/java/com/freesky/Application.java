@@ -1,4 +1,4 @@
-package com.freesky.springboot;
+package com.freesky;
 
 import java.util.Arrays;
 
