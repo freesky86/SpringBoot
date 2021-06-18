@@ -1,3 +1,17 @@
 For MyBatis CRUD example, we need City table.
 1. we can run Dump20210618.sql to import data including database schema - world
 2. we also can download word_country_data.sql from https://gist.github.com/jaconza/1309302
+
+
+------------------------------------------
+-- SELECT * FROM world.city where CountryCode='chn' and district='jiangsu';
+
+-- find the city counts for each province.
+select count(city.name) cnt, city.District from
+(
+select * from world.city 
+where CountryCode='chn' 
+) city
+group by city.District
+order by cnt desc
+----------------------------------------------------------
