@@ -11,13 +11,4 @@
     <result column="District" jdbcType="CHAR" property="district" />
     <result column="Population" jdbcType="INTEGER" property="population" />
   </resultMap>
-  <resultMap id="BaseResultMap" type="com.freesky.bean.City">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <result column="city_id" jdbcType="SMALLINT" property="cityId" />
-    <result column="city" jdbcType="VARCHAR" property="city" />
-    <result column="country_id" jdbcType="SMALLINT" property="countryId" />
-    <result column="last_update" jdbcType="TIMESTAMP" property="lastUpdate" />
-  </resultMap>
 </mapper>

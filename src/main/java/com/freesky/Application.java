@@ -1,14 +1,16 @@
 package com.freesky;
 
-import java.util.Arrays;
-
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+
+import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
+//扫描 mybatis mapper 包路径
+@MapperScan(basePackages="com.freesky.mapper")
+//扫描 所有需要的包, 包含一些自用的工具类包 所在的路径
+@ComponentScan(basePackages= {"com.freesky", "org.n3r.idworker"})
 public class Application {
 
 	public static void main(String[] args) {
