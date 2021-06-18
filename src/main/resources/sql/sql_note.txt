@@ -1,0 +1,3 @@
+For MyBatis CRUD example, we need City table.
+1. we can run Dump20210618.sql to import data including database schema - world
+2. we also can download word_country_data.sql from https://gist.github.com/jaconza/1309302
