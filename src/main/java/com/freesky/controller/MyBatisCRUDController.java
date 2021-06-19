@@ -98,6 +98,20 @@ public class MyBatisCRUDController {
         return IMoocJSONResult.ok("保存成功");
     }
 
+    @RequestMapping("/saveCityTransactional")
+    public IMoocJSONResult saveCityTransactional() {
+
+        City city = new City();
+        city.setCountrycode("CHN");
+        city.setDistrict("test1");
+        city.setName("test123");
+        city.setPopulation(789);
+
+        cityService.saveCityTransactional(city);
+
+        return IMoocJSONResult.ok("保存成功");
+    }
+
     @RequestMapping("/updateCity")
     public IMoocJSONResult updateCity(@RequestParam(name = "id", required = false, defaultValue = "4080") String id) {
         System.err.println("Param(id): " + id);
@@ -114,5 +128,4 @@ public class MyBatisCRUDController {
 
         return IMoocJSONResult.ok("更新成功");
     }
-
 }

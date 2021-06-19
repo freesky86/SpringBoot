@@ -20,5 +20,7 @@ public interface CityService {
 
     public void saveCity(City city) throws Exception;
 
+    public void saveCityTransactional(City city);
+
     public void updateCity(City city);
 }

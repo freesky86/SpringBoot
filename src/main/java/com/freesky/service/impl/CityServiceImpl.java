@@ -58,6 +58,7 @@ public class CityServiceImpl implements CityService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.SUPPORTS)
     public List<City> queryCityByLanguageCustom(String language) {
         List<City> cityList = cityMapperCustom.queryCityInfoByLanguage(language);
 
@@ -127,6 +128,17 @@ public class CityServiceImpl implements CityService {
         }
 
         cityMapper.insert(city);
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void saveCityTransactional(City city) {
+        cityMapper.insert(city);
+
+        // int i = 1 / 0;
+
+        city.setPopulation(123);
+        cityMapper.updateByPrimaryKeySelective(city);
     }
 
     @Override
