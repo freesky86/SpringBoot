@@ -15,3 +15,19 @@ where CountryCode='chn'
 group by city.District
 order by cnt desc
 ----------------------------------------------------------
+
+用Sqldbx 连接Mysql
+https://blog.csdn.net/qq_34957299/article/details/103679975
+Connect Mysql with Sqldbx
+https://www.programmersought.com/article/78984298673/
+
+关键点是 
+安装mysql odbc 驱动（因sqldbx只识别32位的，故下载时注意）
+
+下载地址：https://dev.mysql.com/downloads/connector/odbc/
+
+The Key Point is
+Install mysql odbc driver (because sqldbx only recognizes 32-bit, so pay attention when downloading)
+
+download link:https://dev.mysql.com/downloads/connector/odbc/
+
