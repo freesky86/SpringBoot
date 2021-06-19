@@ -96,7 +96,7 @@ public class MyBatisCRUDController {
 		int pageSize = 10;
 		
 		City city = new City();
-//		city.setNickname("lee");
+		city.setDistrict("shandong");
 		
 		List<City> cityList = cityService.queryCityListPaged(city, page, pageSize);
 		
