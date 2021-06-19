@@ -12,6 +12,8 @@ public interface CityService {
 
     public City queryCityByIdCustom(Integer id);
 
+    public List<City> queryCityByLanguageCustom(String language);
+
     public List<City> queryCityList(City city);
 
     public List<City> queryCityListPaged(City city, Integer page, Integer pageSize);

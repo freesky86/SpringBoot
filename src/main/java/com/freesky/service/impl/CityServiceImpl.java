@@ -58,6 +58,13 @@ public class CityServiceImpl implements CityService {
     }
 
     @Override
+    public List<City> queryCityByLanguageCustom(String language) {
+        List<City> cityList = cityMapperCustom.queryCityInfoByLanguage(language);
+
+        return cityList;
+    }
+
+    @Override
     @Transactional(propagation = Propagation.SUPPORTS)
     public List<City> queryCityList(City city) {
 

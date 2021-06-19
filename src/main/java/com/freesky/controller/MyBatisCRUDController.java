@@ -45,6 +45,13 @@ public class MyBatisCRUDController {
         return IMoocJSONResult.ok(cityService.queryCityByIdCustom(id));
     }
 
+    @RequestMapping("/queryCityByLanguageCustom")
+    public IMoocJSONResult queryCityByLanguageCustom(String language) {
+        // http://localhost:8080/mybatis/queryCityByLanguageCustom?language=Malay
+        // http://localhost:8080/mybatis/queryCityByLanguageCustom?language=Kongo
+        return IMoocJSONResult.ok(cityService.queryCityByLanguageCustom(language));
+    }
+
     @RequestMapping("/queryCityList")
     public IMoocJSONResult queryCityList() {
 
