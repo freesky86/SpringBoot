@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>City List</title>
+    
+</head>
+<body>
+<h1>City List Pagination</h1>
+
+<table>
+    <tr>
+        <th>名称</th>
+        <th>国家编码</th>
+        <th>省份</th>
+        <th>人口</th>
+    </tr>
+    <tr th:each="city:${cityList}">
+        <td th:text="${city.name}">fuyang</td>
+        <td th:text="${city.countrycode}">CHN</td>
+        <td th:text="${city.district}">Anhui</td>
+        <td th:text="${city.population}">123</td>
+    </tr>
+</table>
+
+</body>
