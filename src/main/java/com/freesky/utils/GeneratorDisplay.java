@@ -20,6 +20,12 @@ import org.mybatis.generator.internal.DefaultShellCallback;
 		</dependency>
  * 注意，这里的版本号是1.3.2 .这个版本有类 org.mybatis.generator.api.dom.xml.Element，高版本的jar没有这个类，会导致执行报错
  * 
+ * 这个类会读取generatorConfig.xml文件，其中配置了数据库连接和表名City。
+ * 运行这个类的main函数会生成三个文件
+ * 1.com.freesky.bean目录下的City.java
+ * 2.com.freesky.mapper目录下的CityMapper.java
+ * 3.src/main/resources/mapper目录下的CityMapper.xml
+ * 
  * @author maxzhang
  *
  */
