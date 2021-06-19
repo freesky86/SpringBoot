@@ -10,6 +10,7 @@ import org.thymeleaf.util.StringUtils;
 
 import com.freesky.bean.City;
 import com.freesky.mapper.CityMapper;
+import com.freesky.mapper.CityMapperCustom;
 import com.freesky.service.CityService;
 import com.github.pagehelper.PageHelper;
 
@@ -21,8 +22,8 @@ public class CityServiceImpl implements CityService {
     @Autowired
     private CityMapper cityMapper;
 
-    // @Autowired
-    // private SysUserMapperCustom cityMapperCustom;
+    @Autowired
+    private CityMapperCustom cityMapperCustom;
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
@@ -41,6 +42,19 @@ public class CityServiceImpl implements CityService {
         }
 
         return cityMapper.selectByPrimaryKey(cityId);
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public City queryCityByIdCustom(Integer id) {
+
+        List<City> cityList = cityMapperCustom.queryCitySimplyInfoById(id);
+
+        if (cityList != null && !cityList.isEmpty()) {
+            return cityList.get(0);
+        }
+
+        return null;
     }
 
     @Override

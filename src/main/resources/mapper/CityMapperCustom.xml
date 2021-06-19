@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.freesky.mapper.CityMapperCustom">
+  <!-- 查询简单的用户信息 -->
+	<select id="queryCitySimplyInfoById" resultType="com.freesky.bean.City" 
+										 parameterType="java.lang.Integer" >
+	    select 
+	    	id, name, countryCode, district, population
+	    from 
+	    	City
+	    where 
+	    	id = #{id,jdbcType=INTEGER}
+	    <!-- jdbcType mybatis -->
+	    <!-- https://mybatis.org/mybatis-3/apidocs/reference/org/apache/ibatis/type/JdbcType.html -->
+	</select>
+</mapper>
