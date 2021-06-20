@@ -11,7 +11,8 @@ public class TestTask {
 
     private static final SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss a");
 
-    @Scheduled(fixedRate = 3000)
+    // @Scheduled(fixedRate = 3000)
+    @Scheduled(cron = "5-50 * * * * ?")
     public void reportCurrentTime() {
         System.out.println("现在时间：" + df.format(new Date()));
     }
