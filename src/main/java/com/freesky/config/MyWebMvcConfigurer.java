@@ -2,13 +2,13 @@ package com.freesky.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.freesky.controller.interceptor.OneInterceptor;
 import com.freesky.controller.interceptor.TwoInterceptor;
 
 @Configuration
-public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
+public class MyWebMvcConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -18,7 +18,6 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         registry.addInterceptor(new OneInterceptor()).addPathPatterns("/one/**");
         registry.addInterceptor(new TwoInterceptor()).addPathPatterns("/two/**").addPathPatterns("/one/**");
 
-        super.addInterceptors(registry);
     }
 
 }
