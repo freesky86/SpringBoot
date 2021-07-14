@@ -2,6 +2,18 @@
 
 This project  shows how to use Spring Boot in your project including
 
+## Hot deployment
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+application.properties
+	# 类文件热部署
+	spring.devtools.restart.enabled=true
+
+
 ## jackson-databind
 	<dependency>
 		<groupId>com.fasterxml.jackson.core</groupId>
@@ -155,5 +167,15 @@ create a class DoTask.java to test asynchronous task.
 
 	http://localhost:8080/tasks/test1
 
-## interceptor
+## Interceptor
+create MyWebMvcConfigurer.class which implements WebMvcConfigurer interface, add @Configuration annotation, override addInterceptors() method
+
+under com.freesky.controller.interceptor package, we define two interceptors OneInterceptor.java and TwoInterceptor.java. Both of them implements HandlerInterceptor interface.
+
+create two controllers to test interceptor, OneController.java and TwoController.java
+
+	http://localhost:8080/one/index
+	http://localhost:8080/two/index
+
+
 ## security
