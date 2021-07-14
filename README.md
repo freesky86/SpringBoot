@@ -21,7 +21,8 @@ application.properties
 		<artifactId>jackson-databind</artifactId>
 	</dependency>
 
-  use jackson annotation for com.freesky.bean.User class
+  Use jackson annotation for com.freesky.bean.User class
+  
  	@JsonIgnoreProperties({ "password", "uid" })
   	@JsonFormat(locale = "zh", pattern = "yyyy-MM-dd HH:mm:ss a")
   
