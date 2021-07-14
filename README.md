@@ -9,10 +9,10 @@ This project  shows how to use Spring Boot in your project including
 	</dependency>
 
   use jackson annotation for com.freesky.bean.User class
-  eg. @JsonIgnoreProperties({ "password", "uid" })
-  @JsonFormat(locale = "zh", pattern = "yyyy-MM-dd HH:mm:ss a")
+ 	 eg. @JsonIgnoreProperties({ "password", "uid" })
+  	@JsonFormat(locale = "zh", pattern = "yyyy-MM-dd HH:mm:ss a")
   
-  http://localhost:8080/api/users
+ 	 http://localhost:8080/api/users
 
 ## freemaker demo
 		<dependency>
@@ -41,8 +41,8 @@ application.properties
 
 FreemarkerController.java
 
-http://localhost:8080/ftl/index
-http://localhost:8080/ftl/center
+	http://localhost:8080/ftl/index
+	http://localhost:8080/ftl/center
 
 ## thymeleaf demo
 ## MySQL connection
