@@ -123,6 +123,13 @@ MyBatisCRUDController.java
 	
 	http://localhost:8080/mybatis/queryCityList
 	http://localhost:8080/mybatis/queryCityById?cityId=1962
+	http://localhost:8080/mybatis/saveCity
+	http://localhost:8080/mybatis/deleteCity?cityId=4801
+	
+Add @Transactional(propagation = Propagation.REQUIRED) annotation on the save/delete/update method of CityServiceImpl.java
+
+Add @Transactional(propagation = Propagation.SUPPORTS) annotation on query method of CityServiceImpl.java
+
 
 ## use tk.mybatis and pagehelper to realize pagination
 CityController.java
