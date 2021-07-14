@@ -10,6 +10,7 @@ This project  shows how to use Spring Boot in your project including
 		</dependency>
 		
 application.properties
+
 	# 类文件热部署
 	spring.devtools.restart.enabled=true
 
