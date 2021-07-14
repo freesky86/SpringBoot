@@ -65,6 +65,7 @@ application.properties
 	spring.thymeleaf.cache=false
 
 ThymeleafController.java
+
 	http://localhost:8080/th/index
 	http://localhost:8080/th/center
 
