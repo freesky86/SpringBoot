@@ -75,6 +75,7 @@ IMoocExceptionHandler.java
 	@ExceptionHandler(value = Exception.class)
 
 ErrorController.java
+
 	http://localhost:8080/err/error
 	
 /templates/error.html
