@@ -3,13 +3,14 @@ package com.freesky.exception;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.freesky.bean.IMoocJSONResult;
 
-@ControllerAdvice
+//@ControllerAdvice
+@RestControllerAdvice
 public class IMoocExceptionHandler {
 
 	public static final String IMOOC_ERROR_VIEW = "error";
