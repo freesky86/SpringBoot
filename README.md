@@ -22,22 +22,22 @@ This project  shows how to use Spring Boot in your project including
 
 application.properties
 
-############################################################
-#
-# freemarker 静态资源配置
-#
-############################################################
-#设定ftl文件路径
-spring.freemarker.template-loader-path=classpath:/templates
-# 关闭缓存，即时刷新，上线生成环境需要设置成true
-spring.freemarker.cache=false
-spring.freemarker.charset=UTF-8
-spring.freemarker.check-template-location=true
-spring.freemarker.content-type=text/html
-spring.freemarker.expose-request-attributes=true
-spring.freemarker.expose-session-attributes=true
-spring.freemarker.request-context-attribute=request
-spring.freemarker.suffix=.ftl
+	############################################################
+	#
+	# freemarker 静态资源配置
+	#
+	############################################################
+	#设定ftl文件路径
+	spring.freemarker.template-loader-path=classpath:/templates
+	# 关闭缓存，即时刷新，上线生成环境需要设置成true
+	spring.freemarker.cache=false
+	spring.freemarker.charset=UTF-8
+	spring.freemarker.check-template-location=true
+	spring.freemarker.content-type=text/html
+	spring.freemarker.expose-request-attributes=true
+	spring.freemarker.expose-session-attributes=true
+	spring.freemarker.request-context-attribute=request
+	spring.freemarker.suffix=.ftl
 
 FreemarkerController.java
 
