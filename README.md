@@ -130,5 +130,9 @@ CityMapperCustom.java
 	the method name defined here should be same as the "id" attribute value of <selelct> element in CityMapperCustom.xml.
 
 ## Redis with Spring Boot
+RedisController.java
+
+How to use Redis, refer to RedisTester.java
+
 ## interceptor
 ## security
