@@ -26,7 +26,7 @@ application.properties
  	@JsonIgnoreProperties({ "password", "uid" })
   	@JsonFormat(locale = "zh", pattern = "yyyy-MM-dd HH:mm:ss a")
   
- 	 http://localhost:8080/api/users
+ http://localhost:8080/api/users
 
 ## freemaker demo
 		<dependency>
