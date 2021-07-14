@@ -134,5 +134,14 @@ RedisController.java
 
 How to use Redis, refer to RedisTester.java
 
+## Timer
+add @EnableScheduling annotation with @SpringBootApplication annotation
+
+create task class TestTask.java to use annotation @Scheduled(fixedRate = 3000) or @Scheduled(cron = "5-50 * * * * ?")
+
+about cron, refer to https://cron.qqe2.com/
+
+Spring Boot Cron expression must consist of 6 fields. It means Spring Boot doesn't support Year of cron.
+
 ## interceptor
 ## security
