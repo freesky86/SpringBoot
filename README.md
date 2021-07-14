@@ -137,11 +137,23 @@ How to use Redis, refer to RedisTester.java
 ## Timer
 add @EnableScheduling annotation with @SpringBootApplication annotation
 
-create task class TestTask.java to use annotation @Scheduled(fixedRate = 3000) or @Scheduled(cron = "5-50 * * * * ?")
+create task class TestTask.java with @Component annotation on class and @Scheduled annotation on method
+	
+	@Scheduled(fixedRate = 3000)
+	@Scheduled(cron = "5-50 * * * * ?")
 
 about cron, refer to https://cron.qqe2.com/
 
 Spring Boot Cron expression must consist of 6 fields. It means Spring Boot doesn't support Year of cron.
+
+## Asynchronous task
+add @EnableAsync annotation with @SpringBootApplication annotation
+
+create task class AsyncTask.java with @Component annotation on class and @Async annotation on method
+
+create a class DoTask.java to test asynchronous task.
+
+	http://localhost:8080/tasks/test1
 
 ## interceptor
 ## security
