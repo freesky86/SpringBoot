@@ -77,6 +77,7 @@ IMoocExceptionHandler.java
 ErrorController.java
 
 	http://localhost:8080/err/error
+	http://localhost:8080/err/ajaxerror
 	
 /templates/error.html
 
