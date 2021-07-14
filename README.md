@@ -82,8 +82,53 @@ ErrorController.java
 /templates/error.html
 
 ## MySQL connection
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+application.properties
+	############################################################
+	#
+	# 配置数据源相关，使用阿里巴巴druid数据源
+	#
+	############################################################
+	spring.datasource.url=jdbc:mysql://localhost:3306/world?useUnicode=true&characterEncoding=UTF-8&serverTimezone=EST
+	spring.datasource.username=root
+	spring.datasource.password=dev1234567890
+	#spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+	spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+	spring.datasource.druid.initial-size=1
+	spring.datasource.druid.min-idle=1
+	spring.datasource.druid.max-active=20
+	spring.datasource.druid.test-on-borrow=true
+	spring.datasource.druid.stat-view-servlet.allow=true
+
 ## MyBatic CRUD demo
+MyBatisCRUDController.java
+	
+	http://localhost:8080/mybatis/queryCityList
+	http://localhost:8080/mybatis/queryCityById?cityId=1962
+
 ## use tk.mybatis and pagehelper to realize pagination
+CityController.java
+	
+	http://localhost:8080/city/pagination
+
+## Custom Mapper for Mybatis
+application.properties
+
+	# mybatis 配置
+	mybatis.type-aliases-package=com.freesky.bean
+	mybatis.mapper-locations=classpath:mapper/*.xml
+
+/mapper/CityMapperCustom.xml
+
+CityMapperCustom.java
+	
+	the interface name should be same as the name of CityMapperCustom.xml.
+	the method name defined here should be same as the "id" attribute value of <selelct> element in CityMapperCustom.xml.
+
 ## Redis with Spring Boot
 ## interceptor
 ## security
