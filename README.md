@@ -69,6 +69,16 @@ ThymeleafController.java
 	http://localhost:8080/th/index
 	http://localhost:8080/th/center
 
+## Global Exception handling
+IMoocExceptionHandler.java
+	@ControllerAdvice
+	@ExceptionHandler(value = Exception.class)
+
+ErrorController.java
+	http://localhost:8080/err/error
+	
+/templates/error.html
+
 ## MySQL connection
 ## MyBatic CRUD demo
 ## use tk.mybatis and pagehelper to realize pagination
