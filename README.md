@@ -102,6 +102,7 @@ ErrorController.java
 		</dependency>
 
 application.properties
+
 	############################################################
 	#
 	# 配置数据源相关，使用阿里巴巴druid数据源
