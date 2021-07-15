@@ -28,7 +28,7 @@ application.properties
   
  http://localhost:8080/api/users
 
-## freemaker demo
+## freemaker integration
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
@@ -58,7 +58,7 @@ FreemarkerController.java
 	http://localhost:8080/ftl/index
 	http://localhost:8080/ftl/center
 
-## thymeleaf demo
+## thymeleaf integration
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -102,6 +102,7 @@ ErrorController.java
 		</dependency>
 
 application.properties
+
 	############################################################
 	#
 	# 配置数据源相关，使用阿里巴巴druid数据源
@@ -186,5 +187,5 @@ create two controllers to test interceptor, OneController.java and TwoController
 	http://localhost:8080/one/index
 	http://localhost:8080/two/index
 
-
-## security
+### Contact Author
+Email: *freesky_zh@hotmail.com*
