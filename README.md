@@ -28,7 +28,7 @@ application.properties
   
  http://localhost:8080/api/users
 
-## freemaker demo
+## freemaker integration
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
@@ -58,7 +58,7 @@ FreemarkerController.java
 	http://localhost:8080/ftl/index
 	http://localhost:8080/ftl/center
 
-## thymeleaf demo
+## thymeleaf integration
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
