@@ -58,6 +58,9 @@ URL:<br/>
 <div th:if="${user.age} lt 18">你很年轻</div>
 <div th:if="${user.age} ge 18">大于等于</div>
 <div th:if="${user.age} le 18">小于等于</div>
+<h3>th:unless usage</h3>
+Age is <span th:text="${user.age}"></span>
+<div th:unless="${user.age} == 18"> Not 18 years old</div>
 <br/>
 
 <br/>
