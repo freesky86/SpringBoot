@@ -24,4 +24,11 @@ public class CountryServiceImpl implements CountryService {
         countryMapper.insert(country);
     }
 
+    /**
+     * @param countryMapper the countryMapper to set
+     */
+    protected void setCountryMapper(CountryMapper countryMapper) {
+        this.countryMapper = countryMapper;
+    }
+
 }
