@@ -2,6 +2,8 @@ package com.freesky.service.impl;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +27,12 @@ public class CountryServiceImplTest {
     private CountryServiceImpl service;
 
     @Test
+    public void findCountryList() {
+        List<Country> countryList = service.findCountryList();
+        System.out.println(countryList.size());
+    }
+
+    @Test
     public void queryCountryByCode() {
 
         Country result = service.queryCountryByCode("ABC");
@@ -42,5 +50,4 @@ public class CountryServiceImplTest {
         Mockito.when(countryMapper.selectByPrimaryKey("ABC")).thenReturn(country);
         service.setCountryMapper(countryMapper);
     }
-
 }
