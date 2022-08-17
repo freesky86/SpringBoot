@@ -6,6 +6,11 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Test Controller
+ *
+ * @author Max
+ */
 @RestController
 @RequestMapping("/other")
 public class TestController {
